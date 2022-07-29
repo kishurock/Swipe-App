@@ -11,4 +11,6 @@ class MainViewModel(private val productUseCase: GetProductUseCase) : ViewModel()
         val productList: List<ProductListItem> = productUseCase.execute()
         emit(productList)
     }
+
+
 }

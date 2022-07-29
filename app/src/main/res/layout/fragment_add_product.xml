@@ -52,6 +52,7 @@
                     android:textSize="13sp" />
 
                 <RadioButton
+                    android:id="@+id/serviceCheck"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="50dp"
@@ -185,15 +186,16 @@
                 android:text="Product Images must be PNG or JPEG, Recomended 1024px by 1024 px or 1:1 aspect Ratio"
                 android:textColor="@color/grey"
                 android:textSize="11sp" />
+
             <Button
+                android:id="@+id/addImage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="add Image"
-                android:id="@+id/addImage"
-                android:textSize="11sp"
                 android:layout_below="@id/llOne"
+                android:layout_alignParentEnd="true"
                 android:layout_marginTop="25dp"
-                android:layout_alignParentEnd="true"/>
+                android:text="add Image"
+                android:textSize="11sp" />
 
 
             <androidx.recyclerview.widget.RecyclerView
@@ -204,11 +206,11 @@
                 android:layout_marginTop="10dp" />
 
             <Button
+                android:id="@+id/addProductButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_marginBottom="15dp"
-                android:id="@+id/addProductButton"
                 android:background="@drawable/button_bg"
                 android:text="Add Product" />
         </RelativeLayout>
