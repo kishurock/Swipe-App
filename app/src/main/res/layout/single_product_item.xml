@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/white"
+        app:cardCornerRadius="6dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="10dp">
+<com.google.android.material.card.MaterialCardView
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:id="@+id/cvTwo"
+    app:cardCornerRadius="6dp"
+    android:layout_marginEnd="10dp">
+   <ImageView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:id="@+id/productImage"
+       android:src="@mipmap/ic_launcher"
+       />
+</com.google.android.material.card.MaterialCardView>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/cvTwo"
+                android:id="@+id/rlTwo"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/productName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLength="20"
+                    android:text="Product Name"
+                    android:textColor="@color/grey"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/productType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/productName"
+                    android:layout_marginTop="5dp"
+                    android:maxLength="20"
+                    android:text="Product Type"
+                    android:textColor="@color/lightGrey"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/rlOne"
+                android:layout_toRightOf="@id/rlTwo"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:id="@+id/tvRupee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_toLeftOf="@+id/productPrice"
+                    android:text="₹"
+                    android:textColor="@color/grey"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/productPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="260"
+                    android:textColor="@color/grey"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvTax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/productPrice"
+                    android:layout_marginTop="5dp"
+                    android:layout_toLeftOf="@+id/productTax"
+                    android:text="Tax:"
+                    android:textColor="@color/lightGrey"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/productTax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/productPrice"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp"
+                    android:text="18%"
+                    android:textColor="@color/lightGrey"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

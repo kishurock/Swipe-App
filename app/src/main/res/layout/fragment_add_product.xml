@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".AddProductFragment">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/toolbar_bg"
+            android:textAlignment="textEnd"
+            android:textSize="14sp"
+            app:title="Add Product"
+            app:titleTextColor="#FFFFFF" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp">
+
+            <TextView
+                android:id="@+id/tvType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Type"
+                android:textColor="@color/purple"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rdGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvType"
+                android:checkedButton="@id/productcheck"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/productcheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/purple"
+                    android:text="Product"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:buttonTint="@color/purple"
+                    android:text="Service"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rdGroup"
+                android:layout_marginTop="10dp"
+                android:text="Product Name*"
+                android:textColor="@color/purple"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edtProductName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvName"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edtbg"
+                android:hint="Product Name*"
+                android:minHeight="48dp"
+                android:paddingLeft="8dp"
+                android:paddingTop="10dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/lightGrey"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:id="@+id/llOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtProductName"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="6.5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Selling Price"
+                        android:textColor="@color/purple"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/edtProductPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/edtbg"
+                        android:drawableLeft="@drawable/rupee"
+                        android:hint="00.00"
+                        android:inputType="numberDecimal"
+                        android:minHeight="48dp"
+                        android:padding="8dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/lightGrey"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="3.5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Tax Rate%"
+                        android:textColor="@color/purple"
+                        android:textColorHint="@color/grey"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/edtProductRate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/edtbg"
+                        android:drawableRight="@drawable/percent"
+                        android:hint="00"
+                        android:inputType="numberDecimal"
+                        android:maxLength="4"
+                        android:minHeight="48dp"
+                        android:padding="8dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/lightGrey"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llOne"
+                android:layout_marginTop="20dp"
+                android:text="Product Image"
+                android:textColor="@color/grey"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvDes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvImage"
+                android:layout_marginEnd="10sp"
+                android:layout_toLeftOf="@+id/addImage"
+                android:text="Product Images must be PNG or JPEG, Recomended 1024px by 1024 px or 1:1 aspect Ratio"
+                android:textColor="@color/grey"
+                android:textSize="11sp" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="add Image"
+                android:id="@+id/addImage"
+                android:textSize="11sp"
+                android:layout_below="@id/llOne"
+                android:layout_marginTop="25dp"
+                android:layout_alignParentEnd="true"/>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvImages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvDes"
+                android:layout_marginTop="10dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="15dp"
+                android:id="@+id/addProductButton"
+                android:background="@drawable/button_bg"
+                android:text="Add Product" />
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>
